@@ -1,7 +1,9 @@
 item=int(input("Please Enter Price of Item: "))
 total=int(input("Please Enter Amount Given: "))
-balance=item-total
+balance=total-item
+print(" ")
 print("Amount owed:",balance)
+print(" ")
 fifty=int(balance/50)
 if fifty>0:
 	print("£50: ",fifty)
@@ -26,3 +28,5 @@ fiftyp=float(balance/0.50)
 if fiftyp<0:
 	print("50p: ",fiftyp)
 	balance=balance%0.5
+print(" ")
+print("Transaction Completed")

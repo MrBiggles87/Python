@@ -16,20 +16,21 @@ def numtoword():
 		outputstring+="and " if tens(inputvalue) or units(inputvalue) else ""
 		outputstring+=tens(inputvalue)+" " if tens(inputvalue) else ""
 		outputstring+=units(inputvalue)
+		outputstring=outputstring[0].upper()+outputstring[1:]
 		return outputstring	
 
 
 def thousands(num):
 	numofthousands=(num-num%1000)/1000 #returns the number of 100's from number input
 	if numofthousands>0:
-		return units(numofthousands)+" Thousand"
+		return units(numofthousands)+" thousand"
 	else:
 		return ""
 
 def hundreds(num):
 	numofhundreds=(num%1000-num%100)/100 #returns the number of 100's from number input
 	if numofhundreds>0:
-		return units(numofhundreds)+" Hundred"
+		return units(numofhundreds)+" hundred"
 	else:
 		return ""
 
@@ -37,44 +38,44 @@ def hundreds(num):
 def tens(num):
 	numoftens=num%100-num%10 #Returns the number of 10's in number input
 	if numoftens==20:
-		return "Twenty"
+		return "twenty"
 	elif numoftens==30:
-		return "Thirty"
+		return "thirty"
 	elif numoftens==40:
-		return "Forty"
+		return "forty"
 	elif numoftens==50:
-		return "Fifty"
+		return "fifty"
 	elif numoftens==60:
-		return "Sixty"
+		return "sixty"
 	elif numoftens==70:
-		return "Seventy"
+		return "seventy"
 	elif numoftens==80:
-		return "Eighty"
+		return "eighty"
 	elif numoftens==90:
-		return "Ninety"
+		return "ninety"
 	else:
 		return ""
 
 
 def units(num):
 	if num%10==1:
-		return "One"
+		return "one"
 	elif num%10==2:
-		return "Two"
+		return "two"
 	elif num%10==3:
-		return "Three"
+		return "three"
 	elif num%10==4:
-		return "Four"
+		return "four"
 	elif num%10==5:
-		return "Five"
+		return "five"
 	elif num%10==6:
-		return "Six"
+		return "six"
 	elif num%10==7:
-		return "Seven"
+		return "seven"
 	elif num%10==8:
-		return "Eight"
+		return "eight"
 	elif num%10==9:
-		return "Nine"
+		return "nine"
 	else:
 		return ""
 
@@ -89,27 +90,27 @@ def validation(num):
 def checkspecial(num):
 	if num==0 or (num>=10 and num<=19):
 		if num==0:
-			return "Zero"
+			return "zero"
 		elif num==10:
-			return "Ten"
+			return "ten"
 		elif num==11:
-			return "Eleven"
+			return "eleven"
 		elif num==12:
-			return "Twelve"
+			return "twelve"
 		elif num==13:
-			return "Thirteen"
+			return "thirteen"
 		elif num==14:
-			return "Fourteen"
+			return "fourteen"
 		elif num==15:
-			return "Fifteen"
+			return "fifteen"
 		elif num==16:
-			return "Sixteen"
+			return "sixteen"
 		elif num==17:
-			return "Seventeen"
+			return "seventeen"
 		elif num==18:
-			return "Eighteen"
+			return "eighteen"
 		elif num==19:
-			return "Nineteen"
+			return "nineteen"
 	else:
 		return ""
 

@@ -1,0 +1,2 @@
+find=input("What are you looking for?")
+replace=input("Replace with what?")
